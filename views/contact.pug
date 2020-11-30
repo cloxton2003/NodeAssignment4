@@ -1,8 +1,32 @@
-doctype html
-head
-	title NMC CONTACT
-	link(rel="stylesheet" type="text/css" href="./static/css/style.css")
-body.contact-body
-	.contact-body-cont CORY LOXTON 59 MANCHESTER ROAD, ALBERTA CANADA THE-YUP-BEAN
-script(type="text/javascript" src="./static/js/script.js")
+extends layout.pug
 
+block content
+    .contact-body-cont
+        h2.contact-header Contact us
+        .contact-description
+            |Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+            |a matter of hours to help you.
+        form.contact-form(name='contact-form' method='POST')
+            input.form-input-name(type='text' name='name')
+            label.form-label-name(for='name') Your name
+            input.form-input-email(type='text' name='email')
+            label.form-label-email(for='email') Your email
+            input.form-input-subject(type='text' name='subject')
+            label.form-label-subject(for='subject') Subject
+            textarea.form-textarea(type='text' name='message' rows='2')
+            label.form-textarea-message(for='message') Your message
+            input.form-submit(value='Submit', type='submit')
+            p Calgary, AB T3G1G8, CANADA
+            p 1-403-613-BEAN
+            p contact@myemail
+
+            
+            script.
+                var form = document.querySelector('.contact-form');
+                var contactPar = document.querySelector('.contact-description')
+                var prevSub = function(event) {
+                console.log(form.elements[0].value,form.elements[1].value,form.elements[2].value,form.elements[3].value);
+                event.preventDefault();
+                contactPar.textContent = `Thank you for you being awesome!`;
+                };
+                form.addEventListener('submit', prevSub, true);

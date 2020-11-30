@@ -1,5 +1,5 @@
-
-  
+const index = document.querySelector('.index-body-main')
+if (index) {
   const CANVAS = document.querySelector('canvas');
   const CTX = CANVAS.getContext('2d');
   var isDrawing, lastPoint;
@@ -48,14 +48,4 @@
   }
   window.addEventListener("resize", resizeCanvas);
   resizeCanvas();
-  
-  
-  // --------random greeting------
-
-
-  let GREETING_CONTAINER = document.querySelector('.index-greeting');
-  const greeting = require('greetingsmodule');
-  
-  window.onload = () => {
-    GREETING_CONTAINER.innerHTML = greeting.greet();
-  };
+}

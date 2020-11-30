@@ -10,7 +10,7 @@
     height: 100%;
 }
 
-.index-body {
+.body {
 	background: url('../images/repeatbg.jpg') repeat center;
 	margin: 0;
 	height: 100vh;
@@ -36,7 +36,9 @@
 	font-size: 4em;
 	color: rgba(191, 191, 191, 0.7);
 	font-family: Tafelschrift;
+	font-weight: bold;
 	flex-basis: 50%;
+	margin-top: 60px;
 	text-align: center;
 	transform: rotate(1deg);
 }
@@ -55,40 +57,68 @@
 	transform: rotate(-2deg);
 }
 
-.screen {
-	color: black;
-	mix-blend-mode: screen;
-	background-color: rgb(244, 220, 211);
-	opacity: 0.5;
+.index-footer-copyright {
+	bottom: 0;
+	color: rgba(191, 191, 191, 0.6);
+	font-size: 0.6em;
+	font-family: Tafelschrift;
+	left: 0;
 	position: absolute;
-	right: 45%;
-	max-width: 201px;
-	height: 655px;
-	margin-left: 50px;
+	text-decoration: none;
+	transform: rotate(-2deg);
+	z-index: 1;
 }
 
-.index-greeting {
-	position: absolute;
-	font-size: 4em;
-	color: rgba(191, 191, 191, 0.7);
+.index-header-greeting {
+	top: 10px;
+	color: rgba(191, 191, 191, 0.6);
+	font-size: 1.5em;
 	font-family: Tafelschrift;
-	flex-basis: 50%;
-	text-align: center;
-	transform: rotate(1deg);
+	left: 15%;
+	position: absolute;
+	text-decoration: none;
+	transform: rotate(-1deg);
+	z-index: 1;
 }
 /*--contact page-------------------*/
 
-.contact-body {
+.contact-body-cont {
+	align-items: center;
 	background: url('../images/repeatbg.jpg') repeat center;
+	display: flex;
+	flex-flow: column nowrap;
 	height: 100vh;
+	justify-content: center;
 	width: 100vw;
 	color: rgba(191, 191, 191, 0.7);
 	font-family: Tafelschrift;
+	font-size: 1.2em;
 }
 
+.contact-form {
+	align-content: center;
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.contact-form input, .form-textarea {
+	width: 300px;
+}
+
+.form-textarea {
+	height: 150px;
+}
+
+.contact-description {
+	max-width: 500px;
+}
+
+.form-submit {
+	max-width: 150px;
+}
 /*--about page---------------------*/
 
-.about-body {
+.about-body-cont {
 	background: url('../images/repeatbg.jpg') repeat center;
 	height: 100vh;
 	width: 100vw;
